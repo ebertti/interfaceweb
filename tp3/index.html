@@ -1,26 +1,58 @@
 <html>
-   <head>
-      <script>
-         function validaCampos()
-         {
-            CÓDIGO DE VALIDAÇÃO AQUI
-         }
-      </script>
-      <title>Cadastro de Cliente</title>
-   </head>
+  <head>
+    <script>
+    function validaCampos(evt) {
+      evt.preventDefault();
+
+      var nome = document.getElementById("nome").value;
+      var cpf = document.getElementById("cpf").value;
+      var email = document.getElementById("email").value;
+      var senha = document.getElementById("senha").value;
+      var senhaConfirmacao = document.getElementById("senhaConfirmacao").value;
+
+      var mensagens = [];
+
+      if(nome == ""){
+        mensagens.push('Insira um nome');
+      }
+
+      if(cpf == ""){
+        mensagens.push('Insira o CPF');
+      }
+
+
+      if(mensagens.length){
+        var notifica = "seu formulario possui erros:\n\n";
+
+        for(var i = 0; i < mensagens.length; i++){
+          var m = mensagens[i];
+          notifica += '- ' + m;
+          if(i == mensagens.length - 1) {
+            notifica += '.';
+          } else {
+            notifica += ';\n';
+          }
+        }
+        alert(notifica);
+      }
+      
+    }
+    </script>
+    <title>Cadastro de Cliente</title>
+  </head>
  <body>
-      <form action="#" method="post" id="formularioCadastro" onsubmit="#">
-         <label for="nome">Nome do Cliente:</label>
-         <input name="nome" id="nome" type="text"><br />
-         <label for="cpf">Email:</label>
-         <input name="cpf" id="cpf" type="text"><br />
-         <label for="email">Email:</label>
-         <input name="email" id="email" type="text"><br />
-         <label for="senha">Senha:</label>
-         <input type="password" name="senha" id="senha" /><br />
-         <label for="senhaConfirmacao">Confirme a senha:</label>
-         <input type="password" name="senhaConfirmacao" id="senhaConfirmacao" /><br />
-         <input type="submit" value="Cadastrar" />
-      </form>
-   </body>
+    <form action="#" method="post" id="formularioCadastro" onsubmit="validaCampos(event)">
+      <label for="nome">Nome do Cliente:</label>
+      <input name="nome" id="nome" type="text"><br />
+      <label for="cpf">CPF:</label>
+      <input name="cpf" id="cpf" type="text"><br />
+      <label for="email">Email:</label>
+      <input name="email" id="email" type="text"><br />
+      <label for="senha">Senha:</label>
+      <input type="password" name="senha" id="senha" /><br />
+      <label for="senhaConfirmacao">Confirme a senha:</label>
+      <input type="password" name="senhaConfirmacao" id="senhaConfirmacao" /><br />
+      <input type="submit" value="Cadastrar" />
+    </form>
+  </body>
 </html>
