@@ -35,8 +35,9 @@ $(function(){ /*...*/ });
 setTimeout(callback, tempo);
 ```
 
-5. Quando se digitar uma tarefa na caixa de texto `tarefa`, e for apertada a tecla enter, o texto escrito seja 
-   adicionado na lista `tarefas`
+5. Crie uma função que recebera uma `texto` e criará um elemento na lista de `tarefas`.
+
+6. Quando se digitar uma tarefa na caixa de texto `tarefa`, e for apertada a tecla enter, deverá chamar a função do item anterior.
 
 > https://css-tricks.com/snippets/javascript/javascript-keycodes/
 
@@ -46,28 +47,28 @@ $("seletor").keypress(function(e) {
 })
 ```
 
-6. Quando clicar com o botão da esquerda do mouse em um item da lista, o mesmo deve ter seu fundo destacado.
+7. Quando clicar com o botão da esquerda do mouse em um item da lista, o mesmo deve ter seu fundo destacado.
 
 ```javascript
   $(this).css({background: 'lightgrey'});
 ```
 
-7. Quando clicar com o botao da direita, o item deve ser removido da lista.
+8. Quando clicar com o botao da direita, o item deve ser removido da lista.
 
 ```javascript
   e.which == 3 // botao da direita
 ```
 
-8. Se existirem mais do que 5 tarefas, deve ser exibido um aviso, após o `h1`: **Você possui muitas tarefas!**
+9. Se existirem mais do que 5 tarefas, deve ser exibido um aviso, após o `h1`: **Você possui muitas tarefas!**
 
 ```javascript
   $('seletor').append(texto);
 ```
 
-9. Se houver 5 ou menos tarefas, não deverá ser exibido nenhum aviso.
-10. Não permitir tarefas em branco. 
-11. Não permita que seja adicionada tarefas repetidas.
-12. Se clicar em uma tarefa destacada, ela deverá deixar de estar destacada.
+10. Se houver 5 ou menos tarefas, não deverá ser exibido nenhum aviso.
+11. Não permitir tarefas em branco.
+12. Não permita que seja adicionada tarefas repetidas.
+13. Se clicar em uma tarefa destacada, ela deverá deixar de estar destacada.
 
 
 
