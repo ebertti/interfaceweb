@@ -53,10 +53,10 @@ Utilizar o arquivo `exercicio.html` como base e escrever as modificações no ar
     $(this).css({background: 'lightgrey'});
   ```
 
-8. Quando clicar com o botao da direita, o item deve ser removido da lista.
+8. Quando clicar com o botao do meio, o item deve ser removido da lista.
 
   ```javascript
-    e.which == 3 // botao da direita
+    e.which == 2 // botao da direita
   ```
 
 9. Se existirem mais do que 5 tarefas, deve ser exibido um aviso, após o `h1`: **Você possui muitas tarefas!**
@@ -66,8 +66,11 @@ Utilizar o arquivo `exercicio.html` como base e escrever as modificações no ar
   ```
 
 10. Se houver 5 ou menos tarefas, não deverá ser exibido nenhum aviso.
+
 11. Não permitir tarefas em branco.
+
 12. Não permita que seja adicionada tarefas repetidas.
+
 13. Se clicar em uma tarefa destacada, ela deverá deixar de estar destacada.
 
 
