@@ -28,7 +28,6 @@ $(function(){
     }
 
     if($("input[type='number']").length == 0){
-        console.log('nao usou html5 - sem number')
         console.log('nao usou html5 e nao validou form com html5 - sem number');
     }
 
