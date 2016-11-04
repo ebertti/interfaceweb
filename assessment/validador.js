@@ -50,4 +50,11 @@ $(function(){
     if($('meta[name="viewport"]').length == 0){
         console.log('nao definiu viewport');
     }
+    
+    // Warning Duplicate IDs
+    $('[id]').each(function(){
+      var ids = $('[id="'+this.id+'"]');
+      if(ids.length>1 && ids[0]==this)
+        console.warn('Multiple IDs #'+this.id);
+    });
 })
