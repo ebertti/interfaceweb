@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script>
+      
+        function validaCampos(){
+
+        }
+
+      </script>
+      <title>Cadastro de Cliente</title>
+      <meta charset="utf-8" />
+   </head>
+ <body>
+      <form action="#" method="post" id="formularioCadastro" onsubmit="return validaCampos()">
+         <label for="nome">Nome do Cliente:</label><br />
+         <input name="nome" id="nome" type="text" maxlength="60" size="30"><br />
+         <label for="cpf">CPF:</label><br />
+         <input name="cpf" id="cpf" type="text" maxlength="11" size="13"><br />
+         <label for="email">Email:</label><br />
+         <input name="email" id="email" type="text"><br />        
+         <label for="senha">Senha:</label><br />
+         <input type="password" name="senha" id="senha" /><br />        
+         <label for="senhaConfirmacao">Confirme a senha:</label><br />        
+         <input type="password" name="senhaConfirmacao" id="senhaConfirmacao" /><br />
+         <input type="submit" value="Cadastrar" />
+      </form>
+   </body>
+</html>
